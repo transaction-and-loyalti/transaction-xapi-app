@@ -1,0 +1,11 @@
+{
+  "msg": "failure operation",
+  "code": 400,
+  "success": false,
+  "eventId": "jfgsff55ttoxhzxgy",
+  "error": {
+    "type": "hhgjhh77",
+    "title": "success",
+    "details": "the input contains invalid data amount shuld be integer"
+  }
+}

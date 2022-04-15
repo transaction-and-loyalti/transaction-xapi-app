@@ -1,0 +1,10 @@
+http:
+  listner:
+    port: "8083"
+  requester:
+    host: "localhost"
+    port: "8082"
+    transactionpath: "/api/members/transactions"
+ 
+clientId: "78909c6cb136472299da97c397482ddf"
+clientSecret: "84d6aB5345144a75A1CB055264efaa7e"

@@ -1,0 +1,28 @@
+#%RAML 1.0 DataType
+type: object
+properties:
+ memberId:
+  type: string
+  required: true
+  example: "mem101"
+ transactionId:
+  type: string
+  required: true
+  example: "tn100x"
+ amount:
+  type: integer
+  required: true
+  example: 1000
+ memberTier:
+  type: string
+  required: true
+  enum:
+  - T1
+  - T2
+  - T3
+  - T4
+  example: "T1"
+ transactionDate:
+  type: string
+  required: true
+  example: "2016-08-18"

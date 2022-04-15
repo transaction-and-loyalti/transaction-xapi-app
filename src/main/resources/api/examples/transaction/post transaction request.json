@@ -1,0 +1,7 @@
+{
+  "memberId": "mem100",
+  "transactionId": "tn100x",
+  "amount": 2000,
+  "memberTier": "T1",
+  "transactionDate": "2016-08-18"
+}

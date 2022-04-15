@@ -1,0 +1,11 @@
+{
+  "msg": "failed operation",
+  "code": 401,
+  "success": false,
+  "eventId": "jfgsff55ttoxhzxgy",
+  "error": {
+    "type": "Not found",
+    "title": "resource not found",
+    "details": "resource request not found"
+  }
+}

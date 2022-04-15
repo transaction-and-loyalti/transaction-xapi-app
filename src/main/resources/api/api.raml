@@ -1,0 +1,54 @@
+#%RAML 1.0
+title: transaction-xpapi-raml
+description: This Exprience API will call transaction Papi to insert data into SFDC system
+version: 1.0.0
+
+traits:
+  clientidsecret: !include ../exchange_modules/e29bb81e-72cc-495b-bd60-0d527c385c88/common-fragments/1.0.4/trait/clientidsecrettrait.raml
+  transactionid: !include ../exchange_modules/e29bb81e-72cc-495b-bd60-0d527c385c88/common-fragments/1.0.4/trait/transactionid-trait.raml
+  businesstrait: !include ../exchange_modules/e29bb81e-72cc-495b-bd60-0d527c385c88/common-fragments/1.0.4/trait/business-trait.raml 
+  authorization: !include ../exchange_modules/e29bb81e-72cc-495b-bd60-0d527c385c88/common-fragments/1.0.4/trait/autharizationJWT.raml
+
+types:
+  cmnerrordatatype: !include ../exchange_modules/e29bb81e-72cc-495b-bd60-0d527c385c88/common-fragments/1.0.4/DataType/errorresponce-dataType.raml
+  posttransresp: !include /examples/DataTypes/posttransresp_datatype.raml
+  posttransreq: !include /examples/DataTypes/posttransreq_datatype.raml 
+/members:
+  /transactions:
+    post:
+      is:
+        - clientidsecret
+        - transactionid
+        - businesstrait
+        - authorization
+      body:
+            application/json:
+                  type: posttransreq
+                  example: !include examples/transaction/post transaction request.json 
+      responses:
+          201:
+            body:
+               application/json:
+                  type: posttransresp
+                  example: !include examples/transaction/post transaction response.json
+          400:
+            body:
+               application/json:
+                  type: cmnerrordatatype   
+                  example: !include examples/common/error-400.json
+          401:
+            body:
+               application/json:
+                  type: cmnerrordatatype          
+                  example: !include /examples/common/error-401.json
+          404:
+            body:
+               application/json:
+                  type: cmnerrordatatype
+                  example: !include examples/common/error-404.json
+          500:
+            body:
+               application/json:
+                  type: cmnerrordatatype  
+                  example: !include examples/common/error-500.json
+                   

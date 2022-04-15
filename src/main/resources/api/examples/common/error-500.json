@@ -1,0 +1,11 @@
+{
+  "msg": "failed operation",
+  "code": 500,
+  "success": false,
+  "eventId": "jfgsff55ttoxhzxgy",
+  "error": {
+    "type": "server error",
+    "title": "Internal server error",
+    "details": "the server encountered an unexpected condition which prevented it from fulfilling the request"
+  }
+}

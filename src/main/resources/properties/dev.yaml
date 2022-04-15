@@ -1,0 +1,10 @@
+http:
+  listner:
+    port: "8081"
+  requester:
+    host: "transactionpapiapp.us-e2.cloudhub.io"
+    port: ""
+    transactionpath: "/api/members/transactions"
+ 
+clientId: "f9fea3d8efd04c738a43b710f4919214"
+clientSecret: "fD32FC0E05cd49Bf805aa25836A0B523"

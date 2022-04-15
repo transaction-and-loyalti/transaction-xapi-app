@@ -1,0 +1,21 @@
+#%RAML 1.0 Trait
+
+headers:
+  X-lyt-channel:
+    description: this header will contains channel value.
+    required: true
+    type: string
+    enum:
+      - Mobile
+      - WebApp
+    example: "Mobile"
+  X-lyt-Originlanguage:
+    description: this header will contain origin language
+    type: string
+    required: true
+    example: "en"
+  X-lyt-OriginMarket:
+    description: this header will contain business market
+    type: string
+    required: true
+    example: "ind"
